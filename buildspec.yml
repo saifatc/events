@@ -16,7 +16,6 @@ phases:
       - php -r "unlink('composer-setup.php');" ;
       - mv composer.phar /usr/local/bin/composer
   commands:
-      - echo Build started on `date`
       - echo Installing composer deps
       - composer install --no-progress --no-suggest
 artifacts:
