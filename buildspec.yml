@@ -4,6 +4,9 @@ phases:
   install:
     commands:
       - apt-get update
+      - apt-get install -y  software-properties-common
+      - LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
+      - apt-get update
       - apt-get install -y php7.1
   pre_build:
     commands:
