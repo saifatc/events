@@ -15,9 +15,10 @@ phases:
       - php composer-setup.php ;
       - php -r "unlink('composer-setup.php');" ;
       - mv composer.phar /usr/local/bin/composer
-  build:
-    commands:
-      - phpunit tests
+  commands:
+      - echo Build started on `date`
+      - echo Installing composer deps
+      - composer install --no-progress --no-suggest
 artifacts:
   files:
     - '**/*'
