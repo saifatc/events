@@ -1,6 +1,10 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - yum install -y php70
+      - yum php70-mysqlnd
   pre_build:
     commands:
       - composer install
