@@ -1,0 +1,4 @@
+#!/bin/bash
+yum install -y php70 php70-mysqlnd
+yum install -y php70-mbstring
+yum install -y php70-pecl-imagick
