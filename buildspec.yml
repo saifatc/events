@@ -15,7 +15,7 @@ phases:
       - mv composer.phar /usr/local/bin/composer
   build:
     commands:
-      - composer global require "phpunit/php-invoker=1.1.*"
+      - echo Build completed on `date`
 artifacts:
   files:
     - '**/*'
