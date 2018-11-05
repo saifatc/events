@@ -11,13 +11,11 @@ phases:
   pre_build:
     commands:
       #Install composer
-      - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-      - php composer-setup.php ;
-      - php -r "unlink('composer-setup.php');" ;
+      - curl -sS https://getcomposer.org/installer | php
       - mv composer.phar /usr/local/bin/composer
   build:
     commands:
-      - composer update
+      - composer global require "phpunit/php-invoker=1.1.*"
 artifacts:
   files:
     - '**/*'
