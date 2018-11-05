@@ -17,7 +17,7 @@ phases:
       - mv composer.phar /usr/local/bin/composer
   build:
     commands:
-      - composer install --no-progress --no-suggest
+      - composer install
 artifacts:
   files:
     - '**/*'
