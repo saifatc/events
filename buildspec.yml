@@ -10,7 +10,11 @@ phases:
       - apt-get install -y php7.1
   pre_build:
     commands:
-      - composer install
+      #Install composer
+      - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+      - php composer-setup.php ;
+      - php -r "unlink('composer-setup.php');" ;
+      - mv composer.phar /usr/local/bin/composer
   build:
     commands:
       - phpunit tests
