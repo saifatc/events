@@ -15,8 +15,7 @@ phases:
       - php composer-setup.php ;
       - php -r "unlink('composer-setup.php');" ;
       - mv composer.phar /usr/local/bin/composer
-  commands:
-      - echo Installing composer deps
+    commands:
       - composer install --no-progress --no-suggest
 artifacts:
   files:
