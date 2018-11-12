@@ -1,3 +1,2 @@
 #!/bin/bash
-yum install -y php70-mbstring
-yum install -y php70-pecl-imagick
+yum update -y
