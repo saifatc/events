@@ -1,8 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /atc
     destination: /var/www/html/atc
+  - source: /chinese
+    destination: /var/www/html/chinese
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
