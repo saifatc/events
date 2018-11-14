@@ -5,7 +5,7 @@ files:
     destination: /var/www/html/atc
 hooks:
   ApplicationStop:
-    - location: scripts/stop_server
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: root
   BeforeInstall:
