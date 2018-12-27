@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /atc
-    destination: /var/www/html/atc
+  - source: /events
+    destination: /var/www/html/events
 hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
